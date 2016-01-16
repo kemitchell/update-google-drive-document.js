@@ -1,0 +1,11 @@
+{
+  "name": "update-google-drive-document",
+  "version": "0.0.0",
+  "description": "upload a new revision of a word processing document to Google Drive",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
+  "repository": "kemitchell/update-google-drive-document.js",
+  "license": "MIT",
+  "dependencies": {
+    "googleapis": "^2.1.7"
+  }
+}

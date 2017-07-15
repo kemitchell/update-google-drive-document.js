@@ -1,6 +1,7 @@
 module.exports = updateGoogleDriveDocument
 
 var google = require('googleapis')
+var DOCX = require('docx-content-type')
 var drive = google.drive('v3')
 var https = require('https')
 var querystring = require('querystring')
@@ -24,14 +25,7 @@ function updateGoogleDriveDocument (
             mimeType: 'application/vnd.google-apps.document'
           },
           media: {
-            mimeType: (
-              'application/' +
-              'vnd' +
-              '.openxmlformats' +
-              '-officedocument' +
-              '.wordprocessingml' +
-              '.document'
-            ),
+            mimeType: DOCX,
             body: stream
           }
         }

@@ -6,6 +6,7 @@
   "repository": "kemitchell/update-google-drive-document.js",
   "license": "MIT",
   "dependencies": {
+    "docx-content-type": "^1.0.0",
     "googleapis": "^2.1.7"
   },
   "devDependencies": {

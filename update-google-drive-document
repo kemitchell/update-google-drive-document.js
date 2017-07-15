@@ -8,7 +8,8 @@ if (argv.length < 6 || argv.length > 7) {
     '<client secret> ' +
     '<refresh token> ' +
     '<document> ' +
-    '[file]\n')
+    '[file]\n'
+  )
   process.exit(1)
 } else {
   var clientID = argv[2]

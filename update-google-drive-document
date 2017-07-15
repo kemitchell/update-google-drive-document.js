@@ -9,21 +9,30 @@ if (argv.length < 6 || argv.length > 7) {
     '<refresh token> ' +
     '<document> ' +
     '[file]\n')
-  process.exit(1) }
-else {
+  process.exit(1)
+} else {
   var clientID = argv[2]
   var clientSecret = argv[3]
   var refreshToken = argv[4]
   var documentID = argv[5]
-  var update = require('./').bind(null, clientID, clientSecret, refreshToken)
+  var update = require('./')
+    .bind(null, clientID, clientSecret, refreshToken)
   if (argv.length === 7) {
-    update(documentID, require('fs').createReadStream(argv[6]), callback) }
-  else {
-    update(documentID, process.stdin, callback) } }
+    update(
+      documentID,
+      require('fs').createReadStream(argv[6]),
+      callback
+    )
+  } else {
+    update(documentID, process.stdin, callback)
+  }
+}
 
-function callback(error) {
+function callback (error) {
   if (error) {
     process.stderr.write(error.toString() + '\n')
-    process.exit(1) }
-  else {
-    process.stdout.write('Updated') } }
+    process.exit(1)
+  } else {
+    process.stdout.write('Updated')
+  }
+}

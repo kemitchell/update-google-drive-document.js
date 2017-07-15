@@ -7,5 +7,12 @@
   "license": "MIT",
   "dependencies": {
     "googleapis": "^2.1.7"
+  },
+  "devDependencies": {
+    "standard": "^10.0.2",
+    "standard-markdown": "^4.0.1"
+  },
+  "scripts": {
+    "lint": "standard && standard-markdown"
   }
 }
